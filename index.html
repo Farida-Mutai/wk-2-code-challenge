@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
+        }
+        .shopping-list {
+            max-width: 400px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .item-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .item {
+            margin-bottom: 8px;
+            padding: 8px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .item.purchased {
+            text-decoration: line-through;
+            background-color: #d3d3d3;
+        }
+        .controls {
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="shopping-list">
+        <h2>Shopping List</h2>
+        <input type="text" id="itemInput" placeholder="Enter item...">
+        <button id="addItemBtn">Add</button>
+        <ul class="item-list" id="itemList">
+            <!-- List items will be dynamically added here -->
+        </ul>
+        <div class="controls">
+            <button id="markPurchasedBtn">Mark Purchased</button>
+            <button id="clearListBtn">Clear List</button>
+        </div>
+    </div>
+
+    <script src="list.js"></script>
+</body>
+</html>
